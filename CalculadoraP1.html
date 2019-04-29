@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculadora</title>
+        <script type="text/javascript">
+            function divs(){
+                let x = document.getElementById("a");
+                let y = document.getElementById("b");
+                let a = parseInt(x.value);
+                let b = parseInt(y.value);
+                var i = 1;
+                var j = 0;
+                if(a>b){
+                    var div1 = new Array(b);
+                    while(i<=b){
+                        if((a%i==0)&&(b%i==0)){
+                            div1[j]=i;
+                            j++;
+                        }
+                        i++;
+                    }
+                }
+                if(a<b){
+                    var div1 = new Array(a);
+                    while(i<=a){
+                        if((a%i==0)&&(b%i==0)){
+                            div1[j]=i;
+                            j++;
+                        }
+                        i++;
+                    }
+                }
+                var k = 0;
+                var div2 = [];
+                while((div1[k])!=null){
+                    div2.push(div1[k]);
+                    k++;
+                }
+                document.getElementById("resp").innerHTML = div2;
+            }
+            function equac(){
+                let xx = document.getElementById("a1");
+                let yy = document.getElementById("b1");
+                let zz = document.getElementById("c1");
+                let a1 = parseFloat(xx.value);
+                let b1 = parseFloat(yy.value);
+                let c1 = parseFloat(zz.value);
+                let delta = (b1*b1) - (4*a1*c1);
+                if(delta>0){
+                    let x1 = (-b1 + Math.sqrt(delta)) / (2*a1);
+                    let x2 = (-b1 - Math.sqrt(delta)) / (2*a1);
+                    var text = `As raízes são: ${x1} e ${x2}.`;
+                }
+                if(delta<0){
+                    var text = "Não existe raiz real.";
+                }
+                if(delta==0){
+                    let xx1 = (-b1 + Math.sqrt(delta)) / (2*a1);
+                    var text = `Uma raiz: ${xx1}.`;
+                }
+                document.getElementById("result").innerHTML = text;
+            }
+        </script>  
+        <style>
+            h1{
+                color: #F0F7F4;
+            }
+            body{
+                color: #F0F7F4;
+                text-align: center;
+                background-color: #32292F ;
+            }
+            input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button{
+                -webkit-appearance: none;
+                margin: 0;
+            }
+            input[type="number"]{
+                -moz-appearance: textfield;
+                border: none;
+                padding: 5px 5px;
+                width: 3%;
+                color: gray;
+                background-color:#F0F7F4;
+            }
+            button{
+                padding: 5px 5px;
+                border: none;
+                background-color: #70abaf;
+                color: #F0F7F4;
+                width: 18%;
+            }
+        </style> 
+    </head>
+    <body>
+        <h1>Divisores Comuns</h1>
+        <p>A: <input type="number" id="a"> B: <input type="number" id="b">  </p>
+        <p><button onclick="divs()">CALCULAR</button></p>
+        <p> Divisores Comuns entre A e B: { <span id="resp"></span> }</p>
+
+        <h1>Estudo da Equação de 2° grau</h1>
+        <p>A: <input type="number" id="a1"> B: <input type="number" id="b1"> C: <input type="number" id="c1"> </p>
+        <p><button onclick="equac()">CALCULAR</button></p>
+        <p><span id="result">Resultado...</span></p>
+    </body>
+</html>
