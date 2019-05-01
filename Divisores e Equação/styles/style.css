@@ -1,0 +1,35 @@
+* {
+    font-family: 'Comfortaa', cursive;
+}
+h1{
+    color: #F0F7F4;
+}
+body{ 
+    font-family: 'Comfortaa Regular', sans-serif;
+    font-size: 20px;
+    color: #F0F7F4;
+    text-align: center;
+    background-color: #32292F ;
+}
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"]{
+    border: 1px solid gray;
+    border-radius: 4px;
+    -moz-appearance: textfield;
+    padding: 5px 5px;
+    width: 3%;
+    color: #32292F;
+    background-color:#F0F7F4;
+}
+button{
+    font-size: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 5px;
+    background-color: #70abaf;
+    color: #F0F7F4;
+    width: 20%;
+}
