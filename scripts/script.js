@@ -15,6 +15,16 @@ function divs() {
             i++;
         }
     }
+    if(a===b){
+        var div1 = new Array(a);
+        while (i <= a) {
+            if ((a % i == 0) && (b % i == 0)) {
+                div1[j] = i;
+                j++;
+            }
+            i++;
+        }
+    }
     if (a < b) {
         var div1 = new Array(a);
         while (i <= a) {
@@ -105,5 +115,4 @@ function clearPainel() {
     ctx = canvas.getContext("2d");
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     console.log(ctx);
-
 }
