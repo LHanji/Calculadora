@@ -34,12 +34,9 @@ function divs(){
     document.getElementById("resp").innerHTML = div2;
 }
 function equac(){
-    let xx = document.getElementById("a1");
-    let yy = document.getElementById("b1");
-    let zz = document.getElementById("c1");
-    let a1 = parseFloat(xx.value);
-    let b1 = parseFloat(yy.value);
-    let c1 = parseFloat(zz.value);
+    let a1 = parseFloat(document.getElementById("a1").value);
+	let b1 = parseFloat(document.getElementById("b1").value);
+	let c1 = parseFloat(document.getElementById("c1").value);
     let delta = (b1*b1) - (4*a1*c1);
     if(delta>0){
         let x1 = (-b1 + Math.sqrt(delta)) / (2*a1);
