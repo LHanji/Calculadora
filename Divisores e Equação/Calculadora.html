@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="styles/style.css">
-        <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
-        <title>Calculadoras</title>
-        <script src="scripts/script.js"></script>
-    </head>
-    <body>
-        <h1>Divisores Comuns</h1>
-        <p>A: <input type="number" id="a"> B: <input type="number" id="b">  </p>
-        <p><button onclick="divs()">CALCULAR</button></p>
-        <p> Divisores Comuns entre A e B: { <span id="resp"></span> }</p>
-        <br>
-        <h1>Estudo da Equação de 2° grau</h1>
-        <p>A: <input type="number" id="a1"> B: <input type="number" id="b1"> C: <input type="number" id="c1"> </p>
-        <p><button onclick="equac()">CALCULAR</button></p>
-        <p><span id="result">Resultado...</span></p>
-    </body>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+    <title>Calculadoras</title>
+    <script src="scripts/script.js"></script>
+</head>
+
+<body>
+    <h1>Divisores Comuns</h1>
+    <p>A: <input type="number" id="a"> B: <input type="number" id="b"> </p>
+    <p><button onclick="divs()">CALCULAR</button></p>
+    <p> Divisores Comuns entre A e B: { <span id="resp"></span> }</p>
+    <br>
+    <h1>Estudo da Equação de 2° grau</h1>
+    <p>A: <input type="number" id="a1"> B: <input type="number" id="b1"> C: <input type="number" id="c1"> </p>
+    <p><button onclick="equac()">CALCULAR</button></p>
+    <p><span id="result">Resultado...</span></p>
+    <h2>Gráfico da Função</h2>
+    <canvas id="canvas1" width="500" height="500" style="border:1px black solid;"></canvas>
+    <p><button onclick="clearPainel()">LIMPAR</button></p>
+
+</body>
+
 </html>

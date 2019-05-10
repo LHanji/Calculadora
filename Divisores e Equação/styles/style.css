@@ -4,7 +4,12 @@
 h1{
     color: #F0F7F4;
 }
+canvas{
+    background-color: #F0F7F4;
+    border-radius: 10px;
+}
 body{ 
+    padding: 20px;
     font-family: 'Comfortaa Regular', sans-serif;
     font-size: 20px;
     color: #F0F7F4;
